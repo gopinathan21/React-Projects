@@ -1,0 +1,113 @@
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: var(--primary-bg-color) !important;
+}
+
+.form-container {
+    background: var(--card-background-color);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--border-color);
+    /* box-shadow: 0 2px 10px rgba(142, 255, 86, 0.8); */
+    border-radius: 10px;
+    padding: 28px;
+    width: 80%;
+    max-width: 400px;
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.input-field input {
+    color: var(--primary-text-color);
+    outline: none;
+    border: none;
+    background: var(--primary-bg-color); 
+    width: 100%;
+    padding: 14px;
+    border: 2px solid purple;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.input-field span{
+    color: var(--placeholder-text-color);
+    text-transform: uppercase;
+    padding: 14px;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    transition:  0.5s ease;
+}
+.input-field input:valid ~span ,
+.input-field input:focus ~span{
+    color: yellow;
+    transform: translateX(10px) translateY(-7px);
+    font-size: small;
+    padding: 0 8px;
+    background-color: var(--primary-bg-color-counter);
+    border-left: 1px solid red;
+}
+
+
+.input-field input:invalid ,
+.input-field input:focus {
+    border: 2px solid red;
+    /* background: rgba(13, 1, 1, 1);  */
+}
+/* .input-field input:invalid + span:before {
+    content: "Invalid email";
+    color: red;
+    font-size: small;
+    position: absolute;
+    left: 0;e
+  } */
+
+
+.form-container h1{
+    letter-spacing: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: larger;
+}
+
+.btn{
+    color: var(--primary-text-color);
+    border: 1px solid purple;
+    /* text-transform: uppercase; */
+}
+.btn:hover{
+    border: 1px solid var(--button-hover-color);
+}
+.divider{
+    letter-spacing: 0.8rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: larger;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    align-items: center;
+    column-gap: 1rem;
+    justify-content: space-between;
+}
+
+.divider::after , .divider::before {
+     content: "";
+     height: 2px;
+     background-color: red;
+     display: block;
+  }

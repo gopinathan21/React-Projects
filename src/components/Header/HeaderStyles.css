@@ -1,0 +1,16 @@
+.navbar{
+    position: sticky;
+    width: 100%;
+    background-color: var(--navbar-color);
+    top: 0;
+}
+.theme{
+    color: white;
+    border: 1px solid red;
+    background-color: var(--navbar-icon-color);
+}
+.right{
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}

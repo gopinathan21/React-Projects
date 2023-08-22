@@ -1,0 +1,128 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Typing_Container {
+    min-width: 300px;
+    max-width: 600px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.valid {
+    color: black;
+    background-color: #66ff99;
+}
+
+.in-valid {
+    color: black;
+    background-color: #ff6666;
+}
+
+.spanText {
+    font-size: large;
+    margin: 0.09em;
+    padding: 0.2em;
+    border: 1px solid transparent;
+    border-radius: 24%;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.text-box-div {
+    position: relative;
+    border: 2px solid red;
+    min-width: 300px;
+    max-width: 600px;
+    height: auto;
+    padding: 20px;
+    white-space: pre-wrap;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+.input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.1;
+    color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    max-width: 600px;
+    height: auto;
+    z-index: 2;
+    border: none;
+    background: none;
+    resize: none;
+    outline: none;
+    font-size: inherit;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+
+  .button-container{
+    margin-top: 14px;
+    display: flex;
+  }
+  
+  @media (max-width: 768px) {
+    .button {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+  }
+  
+  .current-word {
+    background-color: grey;
+    animation: blink 2s infinite alternate;
+  }
+  
+  @keyframes blink {
+    0% {
+      background-color: grey;
+    }
+    25% {
+      background-color: transparent;
+    }
+    50% {
+      background-color: grey;
+    }
+    75% {
+      background-color: transparent;
+    }
+    100% {
+      background-color: grey;
+    }
+  }
+  
+
+  
