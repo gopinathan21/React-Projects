@@ -24,4 +24,4 @@ yarn-error.log*
 
 #credentials
 key.json
-Firebase/
+src/Firebase/
