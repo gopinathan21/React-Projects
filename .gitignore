@@ -23,8 +23,7 @@ yarn-debug.log*
 yarn-error.log*
 
 #credentials
-firebase.init.js
 key.json
-src\Firebase
-App.js
+src/Firebase/firebase.init.js
 
+src/Firebase/firebase.init.js
