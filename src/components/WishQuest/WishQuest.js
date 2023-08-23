@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import OpenAI from "openai";
 
 const WishQuest = () => {
-  const OPENAI_API_KEY = "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";
+  const OPENAI_API_KEY = "";
 
   const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
