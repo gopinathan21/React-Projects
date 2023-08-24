@@ -7,6 +7,8 @@ import TypingSpeed from './components/TypingSpeed/TypingSpeed'
 import Header from "./components/Header/Header";
 import VerifiedUser from "./components/VerifiedUser/VerifiedUser"
 import WishQuest from "./components/WishQuest/WishQuest";
+import Pong from "./components/Pong/pong";
+import Rapid from "./components/RapidAPI/Rapid";
 
 
 // CSS Area
@@ -17,7 +19,9 @@ const App = () => {
     <>
     <Header/>
     <Routes>
-      <Route path ="/" element = {<WishQuest/>} />
+      <Route path="/" element = {<Rapid/>} />
+      {/* {<Route path = "/" element = {<Pong/>}/>} */}
+      {/* <Route path ="/" element = {<WishQuest/>} /> */}
       {/* <Route path="/" element = {<TypingSpeed/>}/> */}
       {/* <Route path="/" element={<SignIn />} />
       <Route path="/home" element={<VerifiedUser><Home /></VerifiedUser>} /> */}

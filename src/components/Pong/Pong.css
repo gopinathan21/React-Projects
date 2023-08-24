@@ -1,0 +1,32 @@
+/* Pong.css */
+
+.pong {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #box {
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    position: relative;
+  }
+  
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #leftPaddle {
+    width: 50px;
+    height: 10px;
+    background-color: purple;
+    bottom: 0;
+    position: absolute;
+  }
+  
