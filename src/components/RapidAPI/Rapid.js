@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Rapid.css"
+import API from './RapidKEY.json' 
 
 const Rapid = () => {
   const [market, setMarket] = useState(null);
@@ -18,8 +19,8 @@ const Rapid = () => {
     method: "GET",
     url: "https://bravenewcoin.p.rapidapi.com/market",
     headers: {
-      "X-RapidAPI-Key": "86181d7898msh1b51876816d70fcp15e37cjsn56b758c4d105",
-      "X-RapidAPI-Host": "bravenewcoin.p.rapidapi.com",
+      "X-RapidAPI-Key": API["X-RapidAPI-Key"],
+      "X-RapidAPI-Host": API["X-RapidAPI-Host"],
     },
   };
 
@@ -47,8 +48,8 @@ const Rapid = () => {
     url: "https://bravenewcoin.p.rapidapi.com/asset",
     params: { status: "ACTIVE" },
     headers: {
-      "X-RapidAPI-Key": "86181d7898msh1b51876816d70fcp15e37cjsn56b758c4d105",
-      "X-RapidAPI-Host": "bravenewcoin.p.rapidapi.com",
+      "X-RapidAPI-Key": API["X-RapidAPI-Key"],
+      "X-RapidAPI-Host": API["X-RapidAPI-Host"],
     },
   };
 
@@ -80,8 +81,8 @@ const Rapid = () => {
       method: "GET",
       url: `https://bravenewcoin.p.rapidapi.com/asset/${assetUUID}`,
       headers: {
-        "X-RapidAPI-Key": "86181d7898msh1b51876816d70fcp15e37cjsn56b758c4d105",
-        "X-RapidAPI-Host": "bravenewcoin.p.rapidapi.com",
+        "X-RapidAPI-Key": API["X-RapidAPI-Key"],
+        "X-RapidAPI-Host": API["X-RapidAPI-Host"],
       },
     };
 
@@ -107,8 +108,8 @@ const Rapid = () => {
       method: "GET",
       url: `https://bravenewcoin.p.rapidapi.com/market/${marketUUID}`,
       headers: {
-        "X-RapidAPI-Key": "86181d7898msh1b51876816d70fcp15e37cjsn56b758c4d105",
-        "X-RapidAPI-Host": "bravenewcoin.p.rapidapi.com",
+        "X-RapidAPI-Key": API["X-RapidAPI-Key"],
+        "X-RapidAPI-Host": API["X-RapidAPI-Host"],
       },
     };
 
