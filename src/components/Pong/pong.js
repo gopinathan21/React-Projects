@@ -6,13 +6,15 @@ const Pong = () => {
   const boxHeight = 400;
   const leftPaddleWidth = 50;
   let leftPaddleX = 0;
+  // const leftPaddle = document.getElementById("leftPaddle");
 
   const onMouse = (event) => {
+    const leftPaddle = document.getElementById("leftPaddle");
     const box = document.getElementById("box");
     const boxRect = box.getBoundingClientRect();
   
-    const mouseX = event.clientX - boxRect.left; // Adjust for box's position
-    leftPaddleX = mouseX - leftPaddleWidth / 2; // Center the paddle under the cursor
+    const mouseX = event.clientX - boxRect.left; 
+    leftPaddleX = mouseX - leftPaddleWidth / 2; 
   
     if (leftPaddleX < 0) {
       leftPaddleX = 0;
@@ -22,7 +24,7 @@ const Pong = () => {
       leftPaddleX = boxWidth - leftPaddleWidth;
     }
   
-    const leftPaddle = document.getElementById("leftPaddle");
+    
     leftPaddle.style.left = leftPaddleX + "px";
   };
   
@@ -44,6 +46,10 @@ const Pong = () => {
         this.animationFrameID = null;
       }
 
+       rect(){
+        return this.element.getBoundingClientRect()
+      }
+
       animate() {
         this.x += this.speedX;
         this.y += this.speedY;
@@ -63,22 +69,37 @@ const Pong = () => {
           alert("You lose");
           return;
         }
+        const leftPaddle = document.getElementById("leftPaddle");
 
-        const ballXP = this.x ;
-        const ballYP = this.y + this.size;
+        let ballsRect = balls.map(ball => ball.rect());
 
-        const paddleTopCollision = ballYP > boxHeight - leftPaddleWidth;
-        const paddleSideCollision =
-          ballXP >= leftPaddleX && ballXP <= leftPaddleX + leftPaddleWidth;
-
-        if (paddleTopCollision && paddleSideCollision) {
+        if (ballsRect.some(ballRect => this.isCollision(ballRect, leftPaddle.getBoundingClientRect()))) {
           this.speedY = -this.speedY;
         }
+        // const ballXP = this.x ;
+        // const ballYP = this.y + this.size;
+
+        // const paddleTopCollision = ballYP > boxHeight - leftPaddleWidth;
+        // const paddleSideCollision =
+        //   ballXP >= leftPaddleX && ballXP <= leftPaddleX + leftPaddleWidth;
+
+        // if (paddleTopCollision && paddleSideCollision) {
+        //   this.speedY = -this.speedY;
+        // }
 
         this.element.style.top = this.y + "px";
         this.element.style.left = this.x + "px";
         this.animationFrameID = requestAnimationFrame(this.animate.bind(this));
       }
+       isCollision(rect1, rect2) {
+        return (
+          rect1.left <= rect2.right &&
+          rect1.right >= rect2.left &&
+          rect1.top <= rect2.bottom &&
+          rect1.bottom >= rect2.top
+        )
+      }
+      
 
       cancelAnimation() {
         cancelAnimationFrame(this.animationFrameID);

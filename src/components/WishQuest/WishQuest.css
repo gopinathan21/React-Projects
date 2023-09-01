@@ -1,0 +1,136 @@
+.loader-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
+    min-height: 80px;
+    flex-direction: column;
+}
+
+.loader {
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: var(--primary-bg-color) !important;
+}
+
+.wish-quest-form-container {
+    background: var(--card-background-color);
+    backdrop-filter: blur(5px);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 28px;
+    width: 80%;
+    max-width: 800px;
+    color: var(--primary-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field {
+    position: relative;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.input-field input {
+    color: var(--primary-text-color);
+    outline: none;
+    border: none;
+    background: var(--primary-bg-color);
+    width: 100%;
+    padding: 14px;
+    border: 2px solid purple;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.input-field span {
+    color: var(--placeholder-text-color);
+    text-transform: uppercase;
+    padding: 14px;
+    position: absolute;
+    pointer-events: none;
+    left: 0px;
+    transition: 0.5s ease;
+}
+
+.input-field input:valid~span,
+.input-field input:focus~span {
+    color: yellow;
+    transform: translateX(10px) translateY(-7px);
+    font-size: small;
+    padding: 0 8px;
+    background-color: var(--primary-bg-color-counter);
+    border-left: 1px solid red;
+}
+
+.wish-quest-form-container h1 {
+    /* letter-spacing: 0.8rem; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: small;
+}
+.wish-quest-form-container h3{
+    font-size: 14px;
+    margin-top: 3px;
+}
+
+.btn {
+    color: var(--primary-text-color);
+    border: 1px solid purple;
+    /* text-transform: uppercase; */
+}
+
+.btn:hover {
+    border: 1px solid var(--button-hover-color);
+}
+
+
+.textarea-container {
+    width: 300px;
+    max-width: 100%;
+    position: relative;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 40px;
+    resize: none;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}

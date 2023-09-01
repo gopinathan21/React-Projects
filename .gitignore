@@ -22,7 +22,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#credentials
+#credentialsclea
 key.json
 src/Firebase/firebase.init.js
 server\key.json

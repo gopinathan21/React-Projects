@@ -19,9 +19,9 @@ const App = () => {
     <>
     <Header/>
     <Routes>
-      <Route path="/" element = {<Rapid/>} />
+      {/* <Route path="/" element = {<Rapid/>} /> */}
       {/* {<Route path = "/" element = {<Pong/>}/>} */}
-      {/* <Route path ="/" element = {<WishQuest/>} /> */}
+      <Route path ="/" element = {<WishQuest/>} />
       {/* <Route path="/" element = {<TypingSpeed/>}/> */}
       {/* <Route path="/" element={<SignIn />} />
       <Route path="/home" element={<VerifiedUser><Home /></VerifiedUser>} /> */}
